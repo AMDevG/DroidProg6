@@ -3,6 +3,7 @@ package com.example.johnberry.jberryprogrammingassign6;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.HashMap;
@@ -19,6 +20,7 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
         TextView selectionBanner = (TextView) findViewById(R.id.selectionBanner);
         TextView detailText = (TextView) findViewById(R.id.detailText);
+        ImageView image = (ImageView) findViewById(R.id.imageView);
 
         String selection = getIntent().getStringExtra("SELECTION");
 
@@ -33,9 +35,8 @@ public class DetailActivity extends AppCompatActivity {
                         "some major influence on the development of rock and roll. " +
                         "The Rock and Roll Hall of Fame Foundation was established on April 20, 1983, " +
                         "by Atlantic Records founder and chairman Ahmet Ertegun. In 1986, Cleveland was chosen as " +
-                        "the Hall of Fame's permanent home. Since opening in September 1995, the Rock Hall – part of the citys " +
-                        "redeveloped North Coast Harbor – has hosted more than 10 million visitors and had a cumulative economic " +
-                        "impact estimated at more than $1.8 billion");
+                        "the Hall of Fame's permanent home.");
+                image.setImageResource(R.drawable.rock);
                 break;
             }
 
@@ -48,6 +49,8 @@ public class DetailActivity extends AppCompatActivity {
                         "Known locally as Cleveland's Outdoor Museum, Lake View Cemetery is home to the James A. Garfield " +
                         "Memorial, Wade Memorial Chapel, which features an interior designed by Louis Tiffany, " +
                         "as well as an 80,000,000 gallon capacity concrete-filled dam.");
+
+                image.setImageResource(R.drawable.lakeview);
 
                 break;
             }
@@ -62,6 +65,7 @@ public class DetailActivity extends AppCompatActivity {
                         "best ballpark in a 2008 Sports Illustrated fan opinion poll. The ballpark opened as " +
                         "Jacobs Field in 1994 to replace Cleveland Stadium, which the team had " +
                         "shared with the Cleveland Browns of the National Football League.");
+                image.setImageResource(R.drawable.prog);
                 break;
             }
             case "Edgewater Park": {
@@ -72,6 +76,7 @@ public class DetailActivity extends AppCompatActivity {
                         "swim beaches, boat ramps, fishing pier, picnic areas and grills, " +
                         "and a rentable pavilion."
                 );
+                image.setImageResource(R.drawable.edgewater);
                 break;
             }
 
@@ -81,6 +86,7 @@ public class DetailActivity extends AppCompatActivity {
                         "over the decades, but today remains an economic driver of Cleveland’s " +
                         "Gordon Square Arts District. After suffering extensive water damage, " +
                         "the theatre was restored and reopened by DSCDO in 2009.");
+                image.setImageResource(R.drawable.capitol);
                 break;
             }
 
@@ -93,6 +99,7 @@ public class DetailActivity extends AppCompatActivity {
                         "through a grassroots effort. Their renovation and reopening helped usher in a new " +
                         "era of downtown revitalization in Cleveland, and was called 'one of the top ten " +
                         "successes in Cleveland history'.");
+                image.setImageResource(R.drawable.playhouse);
                 break;
             }
 
@@ -106,6 +113,7 @@ public class DetailActivity extends AppCompatActivity {
                         "center Alta House, named after his daughter Alta Rockefeller Prentice, in 1900. " +
                         "Little Italy is also home to the first Italian restaurant to open in the State of " +
                         "Ohio, Guarino's.");
+                image.setImageResource(R.drawable.italy);
                 break;
             }
         }
